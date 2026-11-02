@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Desk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=Literata:opsz,wght@7..72,600;7..72,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/web/desk.css">
+</head>
+<body>
+    <main>
+        <header class="top">
+            <h1>Desk</h1>
+            <p id="source"></p>
+        </header>
+
+        <p class="price" id="fair"></p>
+        <p class="feed" id="feed"></p>
+        <p class="feed" id="reference"></p>
+
+        <div class="split">
+            <section class="book" aria-label="Book">
+                <h2>Range</h2>
+                <div id="range"></div>
+                <h2>Inventory</h2>
+                <div id="inventory"></div>
+                <h2>Depth</h2>
+                <div id="depth"></div>
+            </section>
+            <section class="ticket" id="ticket" aria-label="Intent ticket"></section>
+        </div>
+
+        <section aria-label="Demo paths">
+            <h2>Fork paths</h2>
+            <div id="paths"></div>
+        </section>
+
+        <section aria-label="Language check">
+            <h2>Command</h2>
+            <form id="command-form">
+                <label for="command">One clause</label>
+                <input id="command" name="command" autocomplete="off" spellcheck="false" placeholder="quote 40 bps">
+                <label for="signature">Owner signature, attached when the clause loosens a limit</label>
+                <input id="signature" name="signature" autocomplete="off" spellcheck="false" placeholder="0x">
+                <div class="examples" id="examples"></div>
+                <button type="submit">Check command</button>
+            </form>
+            <div id="command-result" role="status"></div>
+            <div id="preflight"></div>
+        </section>
+    </main>
+    <script type="module" src="/web/desk.js"></script>
+</body>
+</html>

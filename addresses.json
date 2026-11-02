@@ -1,0 +1,56 @@
+{
+  "chainId": 177,
+  "whsk": { "address": "0xB210D2120d57b758EE163cFfb43e73728c471Cf1", "symbol": "WHSK", "decimals": 18 },
+  "usdt": { "address": "0xF1B50eD67A9e2CC94Ad3c477779E2d4cBfFf9029", "symbol": "USDT", "decimals": 6 },
+  "hskswap": {
+    "factory": "0x972cA9D1662F5e029cD18327D29026532E84c742",
+    "swapRouter02": "0x2c16f75b95Cf1390c328aB70e2CEE7f4b80bD8F3",
+    "nonfungiblePositionManager": "0xDF0A9b833Db0E4CeEa103A4408f3B68e7FC0cad5",
+    "quoterV2": "0x603f70466fDdbE3F238220B9a74FFF419a2BbFDD"
+  },
+  "pool": {
+    "address": "0x4ff515761864e7838B0AdB8b5b2B8B7A068905dC",
+    "fee": 3000,
+    "slot0": {
+      "sqrtPriceX96": "23424351023060863073728",
+      "tick": -300697,
+      "observationIndex": 23,
+      "observationCardinality": 240,
+      "observationCardinalityNext": 240,
+      "feeProtocol": 0,
+      "unlocked": true
+    },
+    "liquidity": "1475831005908433993"
+  },
+  "apro": {
+    "hskUsd": {
+      "address": "0x86CE42c1b714149Dc3A7b17169EF67b5F78A224b",
+      "description": "HSK/USD",
+      "decimals": 8,
+      "status": "denied",
+      "roundId": "0",
+      "answer": "0",
+      "startedAt": "0",
+      "updatedAt": "0",
+      "answeredInRound": "0",
+      "revert": "No access",
+      "revertData": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000094e6f206163636573730000000000000000000000000000000000000000000000"
+    },
+    "usdtUsd": {
+      "address": "0x823d7f90f7A3498DB6595886b6B5dC95E6B0B7f3",
+      "description": "USDT/USD",
+      "decimals": 8,
+      "status": "denied",
+      "roundId": "0",
+      "answer": "0",
+      "startedAt": "0",
+      "updatedAt": "0",
+      "answeredInRound": "0",
+      "revert": "No access",
+      "revertData": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000094e6f206163636573730000000000000000000000000000000000000000000000"
+    }
+  },
+  "hyperindexV3Factory": "0x7858546Cda514455514f248C90670994964795C3",
+  "hyperindexPool": "0xDD035Ab3E0DCe6Ed101cbd095501588773ebCC72",
+  "quoterV2AmountOut": "871"
+}

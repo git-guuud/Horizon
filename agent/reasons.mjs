@@ -1,0 +1,34 @@
+/** keccak256 of the policy and fill reason names. A second machine can recompute them from the name. */
+export const REASONS = {
+    OUTSIDE_BAND: "0xa0c6137b8fc3169797ef9039c0b5c438bb8caf64e3032b9ee779f12fafd5ece2",
+    BELOW_SPREAD: "0x0152b309b55bcdc6d3ade3c8e49254a775d3e51696372ad40c120ffa14ee726f",
+    INVENTORY_CAP: "0x3217fe90722a2e0be8b780f9088dea70195a380b4f8ebc7fd94872663323d5b9",
+    STALE: "0x90eb9bab8d992cd2e698b218ec1afa77dd5dfd19cb4e3c273cf8e6004a6c5804",
+    INVALID_PRICE: "0x428d5dec3df4d9c27be8f5e16af0ee3e8d901986a1c46f27831619134cadf2d2",
+    HALTED: "0x32edd526cc18bd9150053cb60534fb7574a39f5b18c4d02eee3385b0d31ace9f",
+    NOT_STALE: "0xce27cf54c581935e059c00ef8631b4609fee811b3bc50e311fa423d508f4bee0",
+    ALREADY_HALTED: "0x02b40296fd20239f74b353b1823d4b51c67c07fe7b399f75504c8db051d55324",
+    NOT_HALTED: "0xd7d78c625ff25822c4cef9689683c2086f56c95ccd22769f5c9b00b1ebb4b361",
+    NOT_OWNER: "0xd4d6719c9f6bf1f398a61e7ceb8dff26d48346602421236409d0fb0b222f65b2",
+    NOT_OPERATOR: "0x64f38c16987fa40844dc747431b0aea1992874e0eb168ede961ca17257dc1def",
+    BAD_SIGNATURE: "0xb032e5e155f242aafeff46340585abd4e00e0d0608bae245558dc52a66da0121",
+    BAD_NONCE: "0x3f25853c60bb564e5bfa65a08afb8764c81cc655e3abf3e2427b85e4dfcfe737",
+    EXPIRED: "0xbd725cfb5ba01ea5dc5a7159cf41eaa54c28dc001805ce2361d3c894e7c2f72a",
+    NOT_WIDER: "0x3cb3125a221d63548b26f8802762bcaa455ff39c760e4b01e84eeb8fd70f56c5",
+    NOT_TIGHTER: "0x175ec52d9a08601d28c2b4a4d764d7394e9f3a273a9ede2b557e4e65e9d2ee04",
+    NOT_LOWER: "0x776436a291d10766f8349434b0ca3cefc91bff349ffd5e4cb32bb8146f53eb09",
+    NOT_HIGHER: "0x210c383efdbe513e5a9e38422c3cb24d6d2b32231ebb4f4fc5de20f8964720ba",
+    NOT_INVENTORY: "0x544a84d69ab128724487edba4b7ca5e96a4ce6f9df94be6a3f2c0b1c11b9c17d",
+    ZERO_ADDRESS: "0x71869b3729b99fadce3ee30cb1aa2a0d639e6a2d24158c1ae1ae0059e81b72af",
+    BAD_BAND: "0xf4ce84ab7698c82e7af86da126da426e7ac79576c4d4498d2a0d6afef1d9d315",
+    FILL_CAP: "0x85ff2eba56d8ef73c20ff80b4785d5f985543a358eb6ca0adc3a5c5511b7e406",
+    POOL_CAN_FILL: "0xee8c43e18aa283195d4250a34ad43ccb079e28a3b6b4cf7c3326d45a8b3faff8",
+    REASON_MISMATCH: "0x8e3bc2f1faad39a54a130f325dfdfd1064f2f612de48b3bb392b89955fcb388f",
+};
+
+const BY_HASH = new Map(Object.entries(REASONS).map(([name, hash]) => [hash.toLowerCase(), name]));
+
+export function reasonName(hash) {
+    if (typeof hash !== "string") return null;
+    return BY_HASH.get(hash.toLowerCase()) ?? null;
+}

@@ -1,0 +1,18 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+solc = "0.8.26"
+evm_version = "cancun"
+# The position-manager mint exceeds the legacy codegen's stack limit.
+via_ir = true
+optimizer = true
+ffi = true
+fs_permissions = [
+    { access = "read-write", path = "./addresses.json" },
+    { access = "read-write", path = "./web" },
+    { access = "read-write", path = "./cache" },
+]
+
+[rpc_endpoints]
+hashkey = "https://mainnet.hsk.xyz"
